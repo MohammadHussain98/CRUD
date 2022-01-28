@@ -23,14 +23,15 @@ const createCorses = ()=>{
 
     clearCourse()
     displayCourse()
+    // clear()
 }
 
 const clearCourse  = ()=>{
     
-    Cname=courseName.value = ""
-    Ccategory=courseCategory.value =""
-    Cprice=coursePrice.value =""
-    CDescription=courseDescription.value ="" 
+ courseName.value = ""
+    courseCategory.value =""
+    coursePrice.value =""
+   courseDescription.value ="" 
 
 
 }
@@ -53,7 +54,8 @@ Result+=`
             <th>${courses[i].Ccategory}</th>
             <th>${courses[i].Cprice}</th>
             <th>${courses[i].CDescription}</th>
-        
+            <th><button class="edit"><i class="fas fa-edit"></i></button></th>
+            <th><button class="delete" onclick="deleteCourse()" ><i class="fas fa-trash"></i></button> </th>
 
         </tr>
 
@@ -61,5 +63,16 @@ Result+=`
     }
 
 data.innerHTML=Result
+
+}
+
+
+
+const deleteCourse = (id)=>{
+    // console.log('done')
+    
+courses.splice(id,1)
+
+    displayCourse()
 
 }

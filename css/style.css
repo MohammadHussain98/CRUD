@@ -21,6 +21,7 @@ button{
     border: 1px solid black;
     color: #a2a2a2;
     width: 93px;
+    cursor: pointer;
     margin-bottom: 10px;
     height: 30px;
     transition:1px;
@@ -34,17 +35,17 @@ th,td{
     width:200px
 }
 
-/* 
-.class{
-    background-color: green;
-    width: 300px;
-    height: 300px;
+
+.delete{
+    color: red;
+    cursor: pointer;
+    border-radius: 3px;
     margin: auto;
 }
 
-.text{
-    margin: 10px;
-    padding: 50%;
-    color: black;
-    
-} */
+.edit{
+    color: blue;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: auto;
+}
