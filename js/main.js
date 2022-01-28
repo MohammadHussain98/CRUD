@@ -4,20 +4,32 @@ const coursePrice = document.getElementById('coursePrice')
 const courseDescription = document.getElementById('courseDescription')
 
 
-const arr = []
-const createCorses = function(){
-    // console.log('done');
+const courses = [] // array is global
 
-    const courses = {
+const createCorses = ()=>{
+
+
+    const course = {
         Cname:courseName.value,
         Ccategory:courseCategory.value,
         Cprice:coursePrice.value,
         CDescription:courseDescription.value ,
 
     }
-    // console.log(courses)
+    
+    courses.push(course)
+    
+    console.log(courses)
 
-arr.push(courses)
-
+    clearCourse()
 }
 
+const clearCourse  = ()=>{
+    
+    Cname=courseName.value = ""
+    Ccategory=courseCategory.value =""
+    Cprice=coursePrice.value =""
+    CDescription=courseDescription.value ="" 
+
+
+}
